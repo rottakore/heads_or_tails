@@ -1,0 +1,1 @@
+C:\Users\lu\Documents\Projetos\ e\ Anotações\Rust\HeadsOrTails-noAnimation\target\debug\HeadsOrTails-noAnimation.exe: C:\Users\lu\Documents\Projetos\ e\ Anotações\Rust\HeadsOrTails-noAnimation\src\main.rs

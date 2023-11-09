@@ -47,7 +47,7 @@ fn main() {
 	print!("Pick a side [Heads/Tails]: ");
 	stdout()
 	    .flush();
-    let mut userAnswer = String::new();
+	let mut userAnswer = String::new();
 	stdin()
 	    .read_line(&mut userAnswer)
 		    .unwrap();
@@ -55,7 +55,7 @@ fn main() {
 	    .to_uppercase();
 	// << Asking for user input and converting to uppercase
 
-    // Converting "HEADS" to zero >>
+	// Converting "HEADS" to zero >>
 	if userAnswer
 	    .trim() == "HEADS" {
 		*&mut userAnswer = String::from("0");

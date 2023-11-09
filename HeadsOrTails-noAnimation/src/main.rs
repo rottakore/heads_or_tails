@@ -7,14 +7,14 @@ use std::io::{stdin, stdout, Read, Write};
 fn pause() {
 	let mut stdout = stdout();
 	stdout
-	    .write(b"")
-		    .unwrap();
+		.write(b"")
+		.unwrap();
 	stdout
-	    .flush()
-		    .unwrap();
+		.flush()
+		.unwrap();
 	stdin()
-	    .read(&mut [0])
-		    .unwrap();
+		.read(&mut [0])
+		.unwrap();
 }
 // << Pause function
 
@@ -23,31 +23,31 @@ fn main() {
 
 	//Choosing random number >>
 	let mut coinSide = rand::thread_rng()
-	    .gen_range(0..2);
+		.gen_range(0..2);
 	// << Choosing random number
 
 	// Asking for user input and converting to uppercase >>
 	print!("Pick a side [Heads/Tails]: ");
 	stdout()
-	    .flush();
-    let mut userAnswer = String::new();
+		.flush();
+	let mut userAnswer = String::new();
 	stdin()
-	    .read_line(&mut userAnswer)
-		    .unwrap();
+		.read_line(&mut userAnswer)
+		.unwrap();
 	*&mut userAnswer = userAnswer
-	    .to_uppercase();
+		.to_uppercase();
 	// << Asking for user input and converting to uppercase
 
     // Converting "HEADS" to zero >>
 	if userAnswer
-	    .trim() == "HEADS" {
-		*&mut userAnswer = String::from("0");
+		.trim() == "HEADS" {
+			*&mut userAnswer = String::from("0");
 	// << Converting "HEADS" to zero
 	
 	// Converting "TAILS" to one >>
 	} else if userAnswer
-	    .trim() == "TAILS" {
-		*&mut userAnswer = String::from("1");
+		.trim() == "TAILS" {
+			*&mut userAnswer = String::from("1");
 	// << Converting "TAILS" to one
 	
 	// Ending game if user input doesn't match a coin side >>
@@ -60,8 +60,8 @@ fn main() {
 	// Copying userAnswer to a integer variable called "userAnswerCode" >>
 	let userAnswerCode: u32 = userAnswer
 		.trim()
-			.parse()
-				.unwrap();
+		.parse()
+		.unwrap();
 	// << Copying userAnswer to a integer variable called "userAnswerCode"
 	
 	// Showing a winning result if userAnswerCode matches coinSide >>

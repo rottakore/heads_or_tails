@@ -26,8 +26,8 @@ fn main() {
 	// Coin flipping animation >>
 	let mut loadingAnimation = Throbber::new()
 		.message("The coin is flipping..."
-		.to_string())
-		.frames(&throbber::ROTATE_F);
+			.to_string())
+			.frames(&throbber::ROTATE_F);
 	loadingAnimation
 		.start();
 	thread::sleep(time::Duration::from_millis(2000));
